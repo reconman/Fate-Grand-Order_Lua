@@ -1,4 +1,5 @@
 Waver = "waver4.png, waver3.png, waver2.png, waver1.png"
+Merlin = "merlin1.png, merlin23.png, merlin4.png, merlin_c.png"
 Lunchtime = "*chaldea_lunchtime.png"
 
 QP_Party = {
