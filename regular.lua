@@ -211,9 +211,12 @@ end
 
 --User option PSA dialogue. Also choosble list of perdefined skill.
 local function PSADialogue()
-	dialogInit()
+	-- dialogInit()
 	--Auto Refill dialogue content generation.
 	if Refill_Enabled == 1 then
+
+		-- Dialog shown only when using apples
+		dialogInit()
 		if Refill_Resource == "SQ" then
 			RefillType = "sq"
 		elseif Refill_Resource == "All Apples" then
@@ -233,8 +236,12 @@ local function PSADialogue()
 		newRow()
 		addTextView("remember to check those values everytime you execute the script!")
 		addSeparator()
+
+		-- Dialog shown only when using apples
+		dialogShow("CAUTION")
 	end
 
+	--[[
 	--Autoskill dialogue content generation.
 	if Enable_Autoskill == 1 then
 		addTextView("AutoSkill Enabled:")
@@ -267,6 +274,7 @@ local function PSADialogue()
 	if Enable_Autoskill_List == 1 then
 		Skill_Command = Autoskill_List[AutoskillListIndex][2]
 	end
+	]]--
 end
 
 --[[
