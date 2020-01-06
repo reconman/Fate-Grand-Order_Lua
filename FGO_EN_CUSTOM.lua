@@ -10,7 +10,9 @@ QP_Party = {
 
 Dust_Party = {
 	Name = "Dust",
-	Skill_Command = "ci6,#,de5,#,abj14"
+	Support_PreferredServants = Merlin,
+	Support_FallbackTo = "manual",
+	Skill_Command = "cdg5,#,e5,#,abi1k14"
 }
 
 Gear_Party = {
@@ -30,12 +32,18 @@ Lancer_Ember_Party = {
 	Skill_Command = "6,#,h6,#,bc4"
 }
 
+Feather_Party = {
+	Name = "Feather",
+	Skill_Command = "i6,#,f5,#,bcdj14"
+}
+
 Party_List = {
 	QP_Party,
 	Dust_Party,
 	Gear_Party,
 	Ember_Party,
-	Lancer_Ember_Party
+	Lancer_Ember_Party,
+	Feather_Party
 }
 
 --AutoRefill Stamina
@@ -57,7 +65,7 @@ Support_FallbackTo = "first"
 StopAfterBond10 = 0
 BoostItem_SelectionMode = "disabled"
 StorySkip = 0
-Battle_CardPriority = "BAQ"
+Battle_CardPriority = "WB,B,WA,WQ,A,Q,RB,RA,RB"
 Battle_AutoChooseTarget = 0
 Battle_NoblePhantasm = "disabled" 
 UnstableFastSkipDeadAnimation = 0
