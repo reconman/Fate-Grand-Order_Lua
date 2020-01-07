@@ -1,13 +1,25 @@
 Waver = "waver4.png, waver3.png, waver2.png, waver1.png"
 Merlin = "merlin1.png, merlin23.png, merlin4.png, merlin_c.png"
 Lunchtime = "*chaldea_lunchtime.png"
+MonaLisa = "*mona_lisa.png"
 
+--[[
+Any Rider  | Astolfo | Drake
+MLB Kscope | 50% CE  | 50% CE
+]]--
 QP_Party = {
 	Name = "QP",
-	Support_PreferredCEs = "*mona_lisa.png",
+	Support_PreferredCEs = MonaLisa,
 	Skill_Command = "4,#,f5,#,i6"
 }
 
+--[[
+Salter | Nitocris   | Merlin (Support)
+MLB IE | MLB KScope | MLB Lunchtime
+
+Mystic Code: Mages Association
+Location: America / Charlotte
+]]--
 Dust_Party = {
 	Name = "Dust",
 	Support_PreferredServants = Merlin,
@@ -15,6 +27,13 @@ Dust_Party = {
 	Skill_Command = "cdg5,#,e5,#,abi1k14"
 }
 
+--[[
+Geronimo              | Waver (Support) | Nitocris   | Medea
+MLB Holy Night Supper | MLB Lunchtime   | MLB KScope | Black Grail
+
+Mystic Code: Plugsuit
+Location: Shinjuku / Barrel Tower
+]]--
 Gear_Party = {
 	Name = "Gear",
 	Support_PreferredServants = Waver,
@@ -32,9 +51,29 @@ Lancer_Ember_Party = {
 	Skill_Command = "6,#,h6,#,bc4"
 }
 
+--[[
+Salter (Santa) | Drake  | Astolfo
+MLB KScope     | 50% CE | 50% CE
+
+Mystic Code: Fragment of 2030
+Location: Salem / Town Hall
+]]--
 Feather_Party = {
 	Name = "Feather",
 	Skill_Command = "i6,#,f5,#,bcdj14"
+}
+
+--[[
+Kintoki (Rider) | Nitocris   | Waver (Support)
+Black Grail     | MLB KScope | MLB Lunchtime
+
+Location: Agartha / Peach Blossom Shangri-La
+]]--
+Crystal_Party = {
+	Name = "Octuplet Crystal",
+	Support_PreferredServants = Waver,
+	Support_FallbackTo = "manual",
+	Skill_Command = "i5,e5,g1hab4"
 }
 
 Party_List = {
@@ -43,7 +82,8 @@ Party_List = {
 	Gear_Party,
 	Ember_Party,
 	Lancer_Ember_Party,
-	Feather_Party
+	Feather_Party,
+	Crystal_Party
 }
 
 --AutoRefill Stamina
