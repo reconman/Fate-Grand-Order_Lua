@@ -26,7 +26,8 @@ local function checkGifts()
 		countRegion = Region(CountRegionX, gift:getY() - 50, 100, 30)
 		iconRegion = Region(95, gift:getY() - 58, 115, 120)
 		clickSpot = Location(850, gift:getY() + 25)
-		if numberOCRNoFindException(countRegion, "Gift") < goldThreshold then
+		value = numberOCR(countRegion, "Gift")
+		if value < goldThreshold then
 			click(clickSpot)
 			clickCount = clickCount + 1
 		else
@@ -42,30 +43,18 @@ end
 local function scrollList()
 	local touchActions = {
 		{ action = "touchDown", target = Location(700, 700) },
-		{ action = "touchMove", target = Location(700, 175) },
+		{ action = "touchMove", target = Location(700, 165) },
 		{ action =      "wait", target = 0.4 },
-		{ action =   "touchUp", target = Location(700, 175) },
-		{ action =      "wait", target = 0.5 }
+		{ action =   "touchUp", target = Location(700, 165) },
+		{ action =      "wait", target = 0.5 } -- leaving some room for animations to finish
 	}
-	
-	--[[
-	alternative values that work with navigation gestures turned on.
-	read https://github.com/29988122/Fate-Grand-Order_Lua/pull/293 for more info
-	
-	local touchActions = {
-		{ action = "touchDown", target = Location(700, 680) },
-		{ action = "touchMove", target = Location(700, 130) },
-		{ action =      "wait", target = 0.4 },
-		{ action =   "touchUp", target = Location(700, 130) },
-		{ action =      "wait", target = 0.5 }
-	}
-	--]]
 
+	-- the movement has to be as accurate as possible
 	setManualTouchParameter(5, 10)
 	manualTouch(touchActions)
 end
 
-while(clickCount < 99) do
+while(clickCount < 60) do
 	checkGifts()
 	scrollList()
 end
