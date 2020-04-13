@@ -1,5 +1,5 @@
 # Fate-Grand-Order_Lua
-[![Lua-5.1-Sikuli](https://raw.githubusercontent.com/29988122/Fate-Grand-Order_Lua/master/docs/Lua--Sikuli-5.1-blue.svg)](http://www.sikuli.org/)[![GitHub license](https://raw.githubusercontent.com/29988122/Fate-Grand-Order_Lua/master/docs/media/Fate-Grand-Order_Lua.svg)](https://github.com/29988122/Fate-Grand-Order_Lua/blob/master/LICENSE)
+[![Lua-5.1-Sikuli](https://cdn.rawgit.com/29988122/Fate-Grand-Order_Lua/master/docs/media/Lua--Sikuli-5.1-blue.svg)](http://www.sikuli.org/)[![GitHub license](https://cdn.rawgit.com/29988122/Fate-Grand-Order_Lua/master/docs/media/Fate-Grand-Order_Lua.svg)](https://github.com/29988122/Fate-Grand-Order_Lua/blob/master/LICENSE)
 
 Screw those farming events - I only wanna enjoy the (kinoko) story!
 
@@ -11,13 +11,13 @@ Therefore I proudly brought you this: FGO automation script.
 
 This script supported CN, EN, JP and TW servers on Android devices < Oreo 8.0 and emulators.
 
-[What if I have > Android 8.1 phone?](https://29988122.github.io/Fate-Grand-Order_Lua/android81.md)
+[What if I have > Android 8.1 phone?](https://29988122.github.io/Fate-Grand-Order_Lua/#/install?id=android-81-and-above)
 
 As of 2018.12.30, this script is **working without root** / without being blocked or banned, although I DO NOT take responsibility for your banned account! 
 
-[Disclaimer and concern about your account](https://29988122.github.io/Fate-Grand-Order_Lua/account-safety.md)
+[Disclaimer and concern about your account](https://29988122.github.io/Fate-Grand-Order_Lua/#/account-safety)
 
-Please read the **[Documentation](https://29988122.github.io/Fate-Grand-Order_Lua/)**.
+Please read the **[Documentation](https://29988122.github.io/Fate-Grand-Order_Lua/#/)**.
 
 Any questions can be asked in the "Issues" section. Don't be shy xD
 
