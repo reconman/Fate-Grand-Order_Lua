@@ -12,7 +12,7 @@ AutoSkill allows you to execute a series of turn-based skill commands, via user-
 Change ```Enable_Autoskill``` to 1 to enable it, 0 to disable. 
 
 ```Skill_Confirmation``` allows you to skip the Confirm Skill Use window. Modify it according to your Battle Menu setting: 
-```
+```lua
 OFF = 0
 ON = 1
 ```
@@ -52,8 +52,8 @@ Autoskill_List =
 }
 ```
 
-```Skill_Command``` strings should be composed by the following rules:
-```
+`Skill_Command` strings should be composed by the following rules:
+```lua
 ',' = Turn counter
 ',#,' = Battle counter
 '0' = Skip 1 turn
@@ -86,8 +86,8 @@ However by planning ahead, wrote commands for many rounds(putting a lot of zeros
 
 ### Chaldea Combat Uniform: Order Change
 Order Change from Chaldea Combat Uniform allows you to exchange servants during battle.
-By inserting ```x``` into user-predefined strings, you can make your ```Skill_Command``` more flexible:
-```
+By inserting `x` into user-predefined strings, you can make your `Skill_Command` more flexible:
+```lua
 x - activates Order Change
 Starting Member Position - 1  2  3
 Sub-member position - 1  2  3
@@ -97,7 +97,7 @@ Skill_Command = "x13"
 Exchange starting member 1 with sub-member 3
 ```
 Of course, you can mix the Order Change command with normal Autoskill commands:
-```
+```lua
 e.g.
 Skill_Command = "bce,0,f3hi,#,j2d,#,4,x13a1g3"
 ```
@@ -105,7 +105,7 @@ Skill_Command = "bce,0,f3hi,#,j2d,#,4,x13a1g3"
 ### Targeting Enemies
 You can target specific enemies you wish to target with your skills or NP.
 By inserting ```t``` into user-predefined strings, you can make use of this for more complex fights:
-```
+```lua
 t - informs script of targeting
 Position of enemy - 1 2 3
 
@@ -121,7 +121,7 @@ You can attack using 1 or 2 Command Cards before attacking with NPs.
 To use it, insert either ```n1``` or ```n2``` to use 1 or 2 Command Cards before launching the configured NPs.
 
 Here are some examples:
-```
+```lua
 Skill_Command = "n145"
 Use 1 regular Command Card according to the priority from Battle_CardPriority, then use the NPs of the first and second Servants
 
@@ -146,12 +146,12 @@ However, this option is only accurate when you're using SQ or Gold Apples.
 On average, it will consume 3x the amount from `Refill_Repetitions` when using Bronze Apples, 1.2x the amount when using Silver Apples.
 
 ## AutoSupportSelection
-```Support_SelectionMode``` has 3 options: first, preferred, and manual.
-The default setting ```first``` will select the first visible servant on the selection screen. Fastest one.
+`Support_SelectionMode` has 3 options: first, preferred, and manual.
+The default setting `first` will select the first visible servant on the selection screen. Fastest one.
 
-```manual``` is used when you can monitor your script running - you need to select the support servant yourself, and the script will continue running after selection.
+`manual` is used when you can monitor your script running - you need to select the support servant yourself, and the script will continue running after selection.
 
-```preferred``` is our desired option here. By putting screenshots of your pre-defined servant or CE into image_SUPPORT folder, that servant or CE can then be chosen automatically by the script. 
+`preferred` is our desired option here. By putting screenshots of your pre-defined servant or CE into image_SUPPORT folder, that servant or CE can then be chosen automatically by the script. 
 
 [Follow this guide](auto-support-selection.md) if you need to customize your desire servants and CEs. You can also use the the common servants and CEs we provided inside image_SUPPORT folder.
 
@@ -160,10 +160,10 @@ This selection function will search every combination of preferred servants and 
 Thanks @potchy for implementing this function!
 
 ## Card Priority Customization
-By changing the ```Battle_CardPriority``` option, you can have your card selection behavior change. There are two modes available, simple and detailed mode. 
+By changing the `Battle_CardPriority` option, you can have your card selection behavior change. There are two modes available, simple and detailed mode. 
 
 For example:
-```
+```lua
 Simple Mode:
 Battle_CardPriority = "BAQ" 
 It will select Weak Buster->Buster->Resist Buster->Weak Arts->Arts->Resist Arts->Weak Quick->Quick->Resist Quick cards until all three cards included CPs are selected.
@@ -171,7 +171,7 @@ It will select Weak Buster->Buster->Resist Buster->Weak Arts->Arts->Resist Arts-
 Battle_CardPriority = "ABQ"
 It will select Weak Arts->Arts->Resist Arts->Weak Buster->Buster->Resist Buster->Weak Quick->Quick->Resist Quick cards until all three cards included CPs are selected. 
 ```
-```
+```lua
 Detailed Mode:
 Append W to BAQ to turn them into weak cards, append R to BAQ to turn them into resist cards.
 You can create any priority order that will result in the most output you prefer.
