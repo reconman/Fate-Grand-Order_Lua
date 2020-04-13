@@ -3,5 +3,5 @@
 * [Usage](usage.md)
 * [Features](features.md)
 * [Extra scripts](extra-scripts.md)
-* [More script options](more-script-options.md)
 * [Troubleshooting](troubleshooting.md)
+* [Account Safety](account-safety.md)
