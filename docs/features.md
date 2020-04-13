@@ -1,4 +1,4 @@
-#Features
+# Features
 
 By adjusting the settings inside your FGO_REGULAR.lua file, you can achieve the following things:
 * [AutoSkill](#autoskill) Cast skills in battle via user-predefined skill lists.
