@@ -28,8 +28,7 @@ For the official documentation, see the [Ankulua forum post](https://ankulua.boa
 If you need to debug whether your settings are correct or not, add this right before the `end` of `scaling.ApplyAspectRatioFix`:
 
 ```lua
-	local wholeScreen = new Region(0, 0, 2560, 1440)
-	wholeScreen:highlight(10)
+	Region(0, 0, SCRIPT_WIDTH, SCRIPT_HEIGHT):highlight(10)
 ```
 
 This will show a red border around the detected game region, excluding the blue bars. If it doesn't look correct, try different `autoGameArea` and `setImmersiveMode` combinations.
